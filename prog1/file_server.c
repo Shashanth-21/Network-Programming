@@ -21,6 +21,8 @@ int main()
     address.sin_port = htons(1500);
     if (bind(create_socket,(struct sockaddr *)&address,sizeof(address)) == 0)
     printf("Binding Socket\n");
+  while(1)
+  {
     listen(create_socket,3);
     addrlen = sizeof(struct sockaddr_in);
     new_socket = accept(create_socket,(struct sockaddr *)&address,&addrlen);
@@ -43,5 +45,7 @@ int main()
     }
     printf("Request Completed\n");
     close(new_socket);
+  }
+    
     return close(create_socket);
 }
