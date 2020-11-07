@@ -1,1 +1,1 @@
-# npslab
+# Network Programming and security lab
