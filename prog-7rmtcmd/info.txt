@@ -1,1 +1,2 @@
-
+Remote commanda from client to server.
+Executed with help of system().
